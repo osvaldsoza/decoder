@@ -1,0 +1,25 @@
+version: '3.1'
+services:
+  postgres-ead-course:
+    container_name: postgres-course-ms
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ead_course
+  postgres-ead-authuser:
+    container_name: postgres-authuser-ms
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ead_authuser
+  postgres-ead-notification:
+    container_name: postgres-notification-ms
+    image: postgres:12.2
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ead_notification
+    ports:
+      - "5432:5432"
